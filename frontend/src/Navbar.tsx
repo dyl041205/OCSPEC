@@ -13,12 +13,13 @@ function NavBar() {
           <Nav className="me-auto">
             <Nav.Link href="/">Home</Nav.Link>
             <Nav.Link href="/contact">Contact</Nav.Link>
+            <Nav.Link href="/booking">Booking</Nav.Link>
             <NavDropdown title="Dropdown" id="basic-nav-dropdown">
-              <NavDropdown.Item href="#action/3.1">Harrogate</NavDropdown.Item>
-              <NavDropdown.Item href="#action/3.2">
+              <Nav.Link href="/harrogate">Harrogate</Nav.Link>
+              <Nav.Link href="/knaresboroughcastle">
               Knaresborough Castle
-              </NavDropdown.Item>
-              <NavDropdown.Item href="#action/3.3">Leeds</NavDropdown.Item>
+              </Nav.Link>
+              <Nav.Link href="/leeds">Leeds</Nav.Link>
               <NavDropdown.Divider />
               
               

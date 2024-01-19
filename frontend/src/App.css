@@ -1,0 +1,5 @@
+import { cafe } from "./assets/cafe";
+
+*{
+    background-image: cafe.jpg;
+}
