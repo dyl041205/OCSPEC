@@ -14,9 +14,12 @@ function NavBar() {
             <Nav.Link href="/">Home</Nav.Link>
             <Nav.Link href="/contact">Contact</Nav.Link>
             <Nav.Link href="/booking">Booking</Nav.Link>
+            <Nav.Link href="/takeaway">Takeaway</Nav.Link>
             <NavDropdown title="Dropdown" id="basic-nav-dropdown">
               <Nav.Link href="/harrogate">Harrogate</Nav.Link>
+              
               <Nav.Link href="/knaresboroughcastle">
+              
               Knaresborough Castle
               </Nav.Link>
               <Nav.Link href="/leeds">Leeds</Nav.Link>

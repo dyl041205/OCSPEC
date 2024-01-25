@@ -1,5 +1,5 @@
 import { useEffect } from "react";
-
+import Container from 'react-bootstrap/Container';
 
 function Harrogate() {
   useEffect(() => {
@@ -7,6 +7,7 @@ function Harrogate() {
   });
 
   return (
+    <Container fluid="md">
     <>
       <h1>Bean & Brew Cafe</h1>
 
@@ -19,6 +20,7 @@ function Harrogate() {
       <p>We offer multiple different services! These include:</p>
       
     </>
+    </Container>
   );
 }
 

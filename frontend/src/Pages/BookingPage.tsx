@@ -1,5 +1,5 @@
 import Form from "react-bootstrap/Form";
-
+import { Navigate, useNavigate } from 'react-router-dom'
 import { ButtonGroup, Col, Row, ToggleButton } from "react-bootstrap";
 import { useState } from "react";
 
@@ -7,10 +7,11 @@ const App = () => {
   const [checked, setChecked] = useState(false);
   const [radioValue, setRadioValue] = useState("1");
   const radios = [
-    { name: "Active", value: "1" },
-    { name: "Radio", value: "2" },
-    { name: "Radio", value: "3" },
+    { name: "Book A Table", value: "1" },
+    { name: "Book A Baking Lesson", value: "2" },
+    { name: "Order Food For Takeaway", value: "3" },
   ];
+  const navigate = useNavigate();
 
   return (
     <>
@@ -21,6 +22,7 @@ const App = () => {
             id={`radio-${idx}`}
             type="radio"
             variant="secondary"
+            onClick={() => navigate('/takeaway')}
             name="radio"
             value={radio.value}
             checked={radioValue === radio.value}
