@@ -1,26 +1,50 @@
 
+
+
 .text1 {
-    color: aliceblue;
+    color: black;
     text-align: left;
 }
 
 .text2 {
     text-align: left;
-    color: aliceblue;
+    color:black
 }
 
 .text3 {
     text-align: left;
     color:black;
-    background-video: url("https://static.vecteezy.com/system/resources/previews/002/851/983/original/seamless-pattern-with-cafeteria-brown-elements-repetitive-background-with-coffee-beans-beverage-cold-frappe-and-chocolate-chip-cookies-illustration-for-restaurants-and-shops-vector.jpg");
+    
 }
-body {
-    background-image: url("https://www.chatsworth.org/media/05rf2tmr/chatsworth-kitchen-interior.jpg?width=1600&height=920&format=WebP&rnd=133009825642300000");
-   
-   }
 
 .borderleft {
     width: 50%;
     text-align: left;
     background-color:brown ;
+
+
 }
+
+
+.bgimage1{
+    /* The image used */
+background-image:url('../Assets/cafe.jpg');
+ 
+    /* Set a specific height */
+    height: 500px;
+ 
+    /* Create the parallax scrolling effect */
+    background-attachment: local;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+
+
+
+/*body {
+    background-image: url("https://www.chatsworth.org/media/05rf2tmr/chatsworth-kitchen-interior.jpg?width=1600&height=920&format=WebP&rnd=133009825642300000");
+   
+   }
+   */
