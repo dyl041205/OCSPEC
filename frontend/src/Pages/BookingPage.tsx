@@ -1,58 +1,48 @@
-import Form from "react-bootstrap/Form";
-import { Navigate, useNavigate } from 'react-router-dom'
-import { ButtonGroup, Col, Row, ToggleButton } from "react-bootstrap";
-import { useState } from "react";
+import { FormEvent, useState } from 'react';
+import DateTimePicker from 'react-datetime-picker';
+import 'react-datetime-picker/dist/DateTimePicker.css';
+import 'react-calendar/dist/Calendar.css';
+import 'react-clock/dist/Clock.css';
 
-const App = () => {
-  const [checked, setChecked] = useState(false);
-  const [radioValue, setRadioValue] = useState("1");
-  const radios = [
-    { name: "Book A Table", value: "1" },
-    { name: "Book A Baking Lesson", value: "2" },
-    { name: "Order Food For Takeaway", value: "3" },
-  ];
-  const navigate = useNavigate();
+type ValuePiece = Date | null;
+
+type Value = ValuePiece | [ValuePiece, ValuePiece];
+
+function BookingPage() {
+  
+  const [value, onChange] = useState<Value>(new Date());
+  const [time, setTime] = useState(0);
+
+  function setName(value: string): void {
+    throw new Error('Function not implemented.');
+  }
+
+  function handleSubmit(event: FormEvent<HTMLFormElement>): void {
+    event.preventDefault()
+    console.log(time);
+    
+  }
 
   return (
     <>
-      <ButtonGroup className="mb-2">
-        {radios.map((radio, idx) => (
-          <ToggleButton
-            key={idx}
-            id={`radio-${idx}`}
-            type="radio"
-            variant="secondary"
-            onClick={() => navigate('/takeaway')}
-            name="radio"
-            value={radio.value}
-            checked={radioValue === radio.value}
-            onChange={(e) => setRadioValue(e.currentTarget.value)}
-          >
-            {radio.name}
-          </ToggleButton>
-        ))}
-      </ButtonGroup>
-      <br />
+     <form onSubmit={handleSubmit}>
+     <DateTimePicker onChange={(e) => setTime(Number(e?.getTime()))} value={value} />
+      <label>:
 
-      <div>
-        <h1>Welcome To The Booking Page!</h1>
-        <p>This page will allow you to place a booking within our cafe!</p>
-        <p>
-          We Have a variety of different booking options. These include: Baking
-          Lessons, Bakery Takeaway, Book A Space At The Restraunt
-        </p>
-
-        <Row>
-          <Col className="">
-            <Form.Control type="date" size="sm" placeholder="Small input" />
-          </Col>
-          <Col></Col>
-          <Col></Col>
-          <Col></Col>
-        </Row>
-      </div>
+        <input 
+          type="text" 
+          
+          onChange={(e) => setName(e.target.value)}
+        />
+      </label>
+      <input type="submit" />
+    </form>
+    <h1>Welcome To The Booking Page</h1>
+    <div>
+      <DateTimePicker onChange={onChange} value={value} />
+    </div>
     </>
   );
-};
-
-export default App;
+  
+}
+export default BookingPage;

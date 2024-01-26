@@ -17,14 +17,14 @@
     
 }
 
-.borderleft {
+/*.borderleft {
     width: 50%;
     text-align: left;
-    background-color:brown ;
+    background-color:rgb(5, 5, 5) ;
 
 
 }
-
+*/
 
 .bgimage1{
     /* The image used */
@@ -34,7 +34,7 @@ background-image:url('../Assets/cafe.jpg');
     height: 500px;
  
     /* Create the parallax scrolling effect */
-    background-attachment: local;
+    background-attachment: fixed;
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
