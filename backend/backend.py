@@ -10,7 +10,7 @@ CORS(app, resources={r"/*": {"origins": "*"}})
 
 conn = None
 try:
-    conn = sqlite3.connect(r"g:\DB HOMEWORK\database4.db")
+    conn = sqlite3.connect(r"g:\OCSPEC\coffee shop.db")
     print(sqlite3.version)
 except Error as e:
     print(e)
