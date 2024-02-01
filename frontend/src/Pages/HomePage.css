@@ -1,19 +1,26 @@
-
+ .Container {
+    background-color: grey;
+ }
 
 
 .text1 {
-    color: black;
+    background-color: grey;
     text-align: left;
+    color: white
+    
 }
 
 .text2 {
+    background-color: grey;
     text-align: left;
-    color:black
+    color:white
+    
 }
 
 .text3 {
     text-align: left;
-    color:black;
+    background-color: grey;
+    color:white;
     
 }
 
@@ -29,6 +36,7 @@
 .bgimage1{
     /* The image used */
 background-image:url('../Assets/cafe.jpg');
+background-color: grey;
  
     /* Set a specific height */
     height: 500px;
@@ -39,6 +47,7 @@ background-image:url('../Assets/cafe.jpg');
     background-repeat: no-repeat;
     background-size: cover;
 }
+
 
 
 

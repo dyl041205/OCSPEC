@@ -8,11 +8,13 @@ import Harrogate from "./Pages/Harrogate";
 import KnaresboroughCastle from "./Pages/KnaresboroughCastle";
 import Leeds from "./Pages/Leeds";
 import Takeaway from "./Pages/TakeawayPage";
+import Footer from "./Pages/UniversalFooter";
 
 
 function App() {
   return (
     <>
+    
       <NavBar />
       <Routes>
         <Route path={HOME_PATH} element={<HomePage />} />
@@ -23,6 +25,8 @@ function App() {
         <Route path={BOOKING_PATH} element={<BookingPage />} />
         <Route path={TAKEAWAY_PATH} element={<Takeaway />} />
       </Routes>
+      <Footer>
+      </Footer>
     </>
   );
 }

@@ -1,3 +1,4 @@
+from datetime import date
 from sqlite3 import Error
 import sqlite3
 from flask_cors import CORS
@@ -25,13 +26,14 @@ for i in data:
 print(logins)
 
 
-@app.route("/Login", methods=["POST"])
+@app.route("/Date", methods=["POST"])
 def Login():
-    username = request.json["username"]
-    GivenPassword = request.json["password"].encode("utf-8")
+    date = request.json["date"] 
+    print(date)
+    
 
-    if username in logins:
-        savedPassword = logins[username]
+    if date in logins:
+        savedPassword = logins[date]
         if checkpw(GivenPassword, savedPassword):
             return "Login Valid.", 200
 

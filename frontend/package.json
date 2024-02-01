@@ -10,8 +10,9 @@
     "preview": "vite preview"
   },
   "dependencies": {
-    "axios": "^1.6.5",
+    "axios": "^1.6.7",
     "bootstrap": "^5.3.2",
+    "cdbreact": "^1.5.18",
     "date-fns": "^3.3.1",
     "datepicker": "^0.0.0",
     "form": "^0.2.4",
@@ -21,7 +22,8 @@
     "react-datetime-picker": "^5.6.0",
     "react-dom": "^18.2.0",
     "react-router-dom": "^6.21.3",
-    "react-scroll-parallax": "^3.4.5"
+    "react-scroll-parallax": "^3.4.5",
+    "styled-components": "^6.1.8"
   },
   "devDependencies": {
     "@types/react": "^18.2.43",
