@@ -48,7 +48,8 @@ function Signup() {
           <div className='d-flex flex-row justify-content-center mb-4'>
             <MDBCheckbox name='flexCheck' id='flexCheckDefault' label='I agree all statements in Terms of service' />
           </div>
-          <MDBBtn className='mb-4 w-100 gradient-custom-4' size='lg' onClick={handleRegister}>Register</MDBBtn>
+          
+          <MDBBtn className='mb-4 w-100 gradient-custom-4' size='lg' onClick={handleRegister}>Sign Up</MDBBtn>
         </MDBCardBody>
       </MDBCard>
     </MDBContainer>
