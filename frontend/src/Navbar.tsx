@@ -15,6 +15,7 @@ function NavBar() {
             <Nav.Link href="/contact">Contact</Nav.Link>
             <Nav.Link href="/booking">Booking</Nav.Link>
             <Nav.Link href="/takeaway">Takeaway</Nav.Link>
+            <Nav.Link href="/Login">Sign Up Or Login</Nav.Link>
             <NavDropdown title="Dropdown" id="basic-nav-dropdown">
               <Nav.Link href="/harrogate">Harrogate</Nav.Link>
               
