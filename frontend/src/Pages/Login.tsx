@@ -58,7 +58,7 @@ function Login() {
             <MDBInput wrapperClass='mb-4 mx-5 w-100' label='Password' id='formControlLg' type='password' size="lg" onChange={(e) => setPassword(e.target.value)}/>
 
             <MDBBtn className="mb-4 px-5 mx-5 w-100" color='info' size='lg' onClick={handleSubmit}>Login</MDBBtn>
-            <p className="small mb-5 pb-lg-3 ms-5"><a className="text-muted" href="#!">Forgot password?</a></p>
+            <p className="small mb-5 pb-lg-3 ms-5"><a className="text-muted"  href="/reset">Forgot password?</a></p>
             <p className='ms-5'>Don't have an account? <a href="/signup" className="link-info">Register here</a></p>
 
           </div>
