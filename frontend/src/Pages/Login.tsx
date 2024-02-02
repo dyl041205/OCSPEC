@@ -1,4 +1,4 @@
-import React from 'react';
+
 import {
   MDBBtn,
   MDBContainer,
@@ -8,8 +8,37 @@ import {
   MDBInput
 }
 from 'mdb-react-ui-kit';
+import axios from 'axios';
+import { useState, FormEvent } from 'react';
 
-function App() {
+function Login() {
+    const [Email, setEmail] = useState("");
+    const [password, setPassword] = useState("");
+    const [message, postMessage] = useState("");
+
+  const handleSubmit = async (e: FormEvent) => {
+    e.preventDefault();
+    postMessage("");
+ 
+ 
+      try{
+      const Reply = await axios.post("http://127.0.0.1:5000/Login", {
+      email: Email,
+      password: password,
+     
+    });
+      postMessage(JSON.stringify(Reply.data));
+      }catch (error) {
+          if(axios.isAxiosError(error)) {
+              postMessage(error.message);
+          } else {
+              postMessage(String(error));
+          }
+      }
+  };
+
+
+
   return (
     <MDBContainer fluid>
       <MDBRow>
@@ -25,14 +54,15 @@ function App() {
 
             <h3 className="fw-normal mb-3 ps-5 pb-3" style={{letterSpacing: '1px'}}>Log in</h3>
 
-            <MDBInput wrapperClass='mb-4 mx-5 w-100' label='Email address' id='formControlLg' type='email' size="lg"/>
-            <MDBInput wrapperClass='mb-4 mx-5 w-100' label='Password' id='formControlLg' type='password' size="lg"/>
+            <MDBInput wrapperClass='mb-4 mx-5 w-100' label='Email address' id='formControlLg' type='email' size="lg" onChange={(e) => setEmail(e.target.value)}/>
+            <MDBInput wrapperClass='mb-4 mx-5 w-100' label='Password' id='formControlLg' type='password' size="lg" onChange={(e) => setPassword(e.target.value)}/>
 
-            <MDBBtn className="mb-4 px-5 mx-5 w-100" color='info' size='lg'>Login</MDBBtn>
+            <MDBBtn className="mb-4 px-5 mx-5 w-100" color='info' size='lg' onClick={handleSubmit}>Login</MDBBtn>
             <p className="small mb-5 pb-lg-3 ms-5"><a className="text-muted" href="#!">Forgot password?</a></p>
             <p className='ms-5'>Don't have an account? <a href="/signup" className="link-info">Register here</a></p>
 
           </div>
+          {message && <p>Response: {message}</p>}
 
         </MDBCol>
 
@@ -47,4 +77,4 @@ function App() {
   );
 }
 
-export default App;
+export default Login;
